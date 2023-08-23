@@ -1,66 +1,36 @@
-// Estructuras de control de flujo
+let nombre = "Hernan";
+let apellido = "Paez";
 
-// AND &&
-// OR ||
-// NOT !
-let num1 = 10;
-let num2 = 5;
+console.log(nombre + apellido);
 
-let operacion = "suma";
+console.log(`${nombre} ${apellido}`);
 
-if (operacion == "suma") {
-  console.log(num1 + num2);
-} else if (operacion == "resta") {
-  console.log(num1 - num2);
-} else if (operacion == "multiplicacion") {
-  console.log(num1 * num2);
-} else if (operacion == "division") {
-  console.log(num1 / num2);
-} else {
-  console.log("Operacion no válida");
-}
+console.log(nombre.concat(apellido));
 
-switch (operacion) {
-  case "suma":
-    console.log(num1 + num2);
-    break;
-  case "resta":
-    console.log(num1 - num2);
-    break;
-  case "division":
-    console.log(num1 / num2);
-    break;
-  case "multiplicacion":
-    console.log(num1 * num2);
-    break;
-  default:
-    console.log("el valor no es conocido");
-    break;
-}
+let stringRandom = "123456";
 
-let whileIterador = 0;
+console.log(stringRandom);
 
-let miArray = ["hola", "bye", "console", "log"];
-console.log(miArray.length);
+// borra los espacios en blaco al principio y al final del string
+console.log(stringRandom.trim());
 
-while (whileIterador < miArray.length) {
-  console.log(miArray[whileIterador]);
-  whileIterador++;
-}
+// string (split) convierte un string a un array y lo separa en base a lo que le pongamos en el parametro
+// array (reverse) invierte le orden de los elementos del array
+// array (join) junta en un string los elementos del array
+console.log(stringRandom.trim().split("").reverse().join(""));
 
-while (false) {
-  console.log("hello while");
-}
+// console
 
-let i = 0;
+console.log("Log");
+console.error("Error");
+console.warn("Warn");
+console.info("Info");
 
-do {
-  console.log(miArray[i]);
-  i++;
-} while (i < miArray.length);
+let miArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+// matriz de 3x3
 
-for (let j = 0; j < miArray.length; j++) {
-  console.log("for ", j);
-}
-
-console.log(3 == 3 ? "hola" : "chau");
+console.table(miArray);
