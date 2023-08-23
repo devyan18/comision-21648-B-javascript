@@ -1,36 +1,73 @@
-let nombre = "Hernan";
-let apellido = "Paez";
+// let num1 = 10;
+// let num2 = 5;
 
-console.log(nombre + apellido);
+// let operacion = "suma";
 
-console.log(`${nombre} ${apellido}`);
+// if (operacion == "suma") {
+//   console.log(num1 + num2);
+// } else if (operacion == "resta") {
+//   console.log(num1 - num2);
+// } else if (operacion == "multiplicacion") {
+//   console.log(num1 * num2);
+// } else if (operacion == "division") {
+//   console.log(num1 / num2);
+// } else {
+//   console.log("Operacion no válida");
+// }
 
-console.log(nombre.concat(apellido));
+// funciones declarativas
+function decirHola() {
+  console.log("hola mundo");
+}
 
-let stringRandom = "123456";
+// expresiva
+// const decirHola2 = function () {
+//   console.log("hola mundo 2");
+// };
 
-console.log(stringRandom);
+// funciones de flecha
+// const decirHola3 = () => {
+//   console.log("hola mundo 3");
+// };
 
-// borra los espacios en blaco al principio y al final del string
-console.log(stringRandom.trim());
+// decirHola();
+// decirHola3();
 
-// string (split) convierte un string a un array y lo separa en base a lo que le pongamos en el parametro
-// array (reverse) invierte le orden de los elementos del array
-// array (join) junta en un string los elementos del array
-console.log(stringRandom.trim().split("").reverse().join(""));
+// function suma(numero1 = 0, numero2 = 0) {
+//   console.log(numero1 + numero2);
+// }
 
-// console
+// suma(3, 2);
 
-console.log("Log");
-console.error("Error");
-console.warn("Warn");
-console.info("Info");
+// con parametros nombrados y aplicando desestructuracion
+function calculadora({ operacion, num1, num2 }) {
+  if (operacion == "suma") {
+    console.log(num1 + num2);
+  } else if (operacion == "resta") {
+    console.log(num1 - num2);
+  } else if (operacion == "multiplicacion") {
+    console.log(num1 * num2);
+  } else if (operacion == "division") {
+    console.log(num1 / num2);
+  } else {
+    console.log("Operacion no válida");
+  }
+}
 
-let miArray = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
-// matriz de 3x3
+calculadora({
+  operacion: "resta",
+  num1: 10,
+  num2: 20,
+});
 
-console.table(miArray);
+const miObjeto = {
+  nombre: "hola",
+  apellido: "chau",
+};
+const miArray = ["hola", "chau"];
+
+// desestructuracion de objetos
+const { apellido, nombre } = miObjeto;
+
+// desestructuracion de arrays
+const [variable1, variable2] = miArray;
