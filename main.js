@@ -1,33 +1,66 @@
-// VARIABLES
+// Estructuras de control de flujo
 
-// variable
-let miNuevaVariable = "Hola mundo";
-miNuevaVariable = "chau mundo";
+// AND &&
+// OR ||
+// NOT !
+let num1 = 10;
+let num2 = 5;
 
-// constante
-const miNuevaConstante = "Hola mundo";
+let operacion = "suma";
 
-// guardar todos los tipos de datos en variables
+if (operacion == "suma") {
+  console.log(num1 + num2);
+} else if (operacion == "resta") {
+  console.log(num1 - num2);
+} else if (operacion == "multiplicacion") {
+  console.log(num1 * num2);
+} else if (operacion == "division") {
+  console.log(num1 / num2);
+} else {
+  console.log("Operacion no válida");
+}
 
-let money = 1000;
-let price = 100;
+switch (operacion) {
+  case "suma":
+    console.log(num1 + num2);
+    break;
+  case "resta":
+    console.log(num1 - num2);
+    break;
+  case "division":
+    console.log(num1 / num2);
+    break;
+  case "multiplicacion":
+    console.log(num1 * num2);
+    break;
+  default:
+    console.log("el valor no es conocido");
+    break;
+}
 
-money = money - price;
-console.log(money);
+let whileIterador = 0;
 
-money = money - price;
-console.log(money);
+let miArray = ["hola", "bye", "console", "log"];
+console.log(miArray.length);
 
-money = money - price;
-console.log(money);
+while (whileIterador < miArray.length) {
+  console.log(miArray[whileIterador]);
+  whileIterador++;
+}
 
-money = money - price;
-console.log(money);
+while (false) {
+  console.log("hello while");
+}
 
-let miArray = ["hola", "chau", 12, true];
+let i = 0;
 
-console.log(miArray);
+do {
+  console.log(miArray[i]);
+  i++;
+} while (i < miArray.length);
 
-miArray.push(10);
+for (let j = 0; j < miArray.length; j++) {
+  console.log("for ", j);
+}
 
-console.log(miArray);
+console.log(3 == 3 ? "hola" : "chau");
