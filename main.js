@@ -1,34 +1,33 @@
-// tipos de datos primitivos
+// VARIABLES
 
-// string
-console.log(typeof "Juan Lavayen");
+// variable
+let miNuevaVariable = "Hola mundo";
+miNuevaVariable = "chau mundo";
 
-// number
-console.log(typeof 123123);
+// constante
+const miNuevaConstante = "Hola mundo";
 
-// bigint
-console.log(typeof 490528730495872039847590823746n);
+// guardar todos los tipos de datos en variables
 
-// booleans
-console.log(typeof true);
-console.log(typeof false);
+let money = 1000;
+let price = 100;
 
-// null
-console.log(typeof null);
+money = money - price;
+console.log(money);
 
-// undefined
-console.log(typeof undefined);
+money = money - price;
+console.log(money);
 
-// symbol
-console.log(typeof Symbol());
-////////////////////////////////////////////////
-// tipos de datos compuestos
+money = money - price;
+console.log(money);
 
-// array
-console.log(["hola", true, 12, 12n, Symbol()]);
+money = money - price;
+console.log(money);
 
-// objects
-console.log({
-  nombre: "Luis",
-  apellido: "Marin",
-});
+let miArray = ["hola", "chau", 12, true];
+
+console.log(miArray);
+
+miArray.push(10);
+
+console.log(miArray);
